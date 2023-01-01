@@ -1,0 +1,14 @@
+{
+  "name": "github-profile-languages",
+  "version": "1.0.0",
+  "dependencies": {
+    "axios": "latest"
+  },
+  "devDependencies": {
+    "@primer/css": "latest",
+    "js-yaml": "latest",
+    "webpack": "latest",
+    "webpack-cli": "latest"
+  },
+  "type": "module"
+}
