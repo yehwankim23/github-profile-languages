@@ -22,8 +22,7 @@ document.body.innerHTML = `
     <text
       x="28"
       y="16"
-      font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, 
-                   sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'"
+      font-family="Arial, sans-serif"
       font-size="12"
       font-weight="600"
       fill="${theme.languageColor}"
@@ -33,8 +32,7 @@ document.body.innerHTML = `
     <text
       x="${28 + longestLanguage.width + 4}"
       y="16"
-      font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans', Helvetica, Arial, 
-                   sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'"
+      font-family="Arial, sans-serif"
       font-size="12"
       fill="${theme.percentColor}"
     >
