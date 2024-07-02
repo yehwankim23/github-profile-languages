@@ -99,7 +99,7 @@ export default async function handler(request, response) {
           y="0"
           width="${outerWidth}"
           height="8"
-          fill="${theme.barColor}"
+          fill="${theme.backgroundColor}"
           mask="url(#mask)"
         ></rect>
         ${rects}

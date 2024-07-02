@@ -55,7 +55,7 @@ export default async function handler(request, response) {
           width="${28 + languageWidth + 4 + percentWidth + 8}"
           height="24"
           rx="6"
-          fill="${theme.buttonColor}"
+          fill="${theme.backgroundColor}"
         ></rect>
         <circle cx="12" cy="12" r="4" fill="${language.color}"></circle>
         <text
