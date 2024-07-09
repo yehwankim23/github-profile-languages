@@ -6,47 +6,25 @@ Inspired by [GitHub Readme Stats](https://github.com/anuraghazra/github-readme-s
 
 ## Preview
 
-### Language Bar
+### Dark Themes
 
-Default theme (dark):
+Language Bar:
 
-![Language bar preview (dark default)](https://github-profile-languages.vercel.app/api/bar?width=830&theme=dark)
+![Language bar preview (dark)](https://github-profile-languages.vercel.app/api/bar?width=830&theme=dark)
 
-<details>
-  <summary>Other themes:</summary>
-  <br />
+Language Button (default, high contrast, dimmed):
 
-Light themes (default, high contrast, Protanopia & Deuteranopia, Tritanopia):
+![Language button preview (dark default)](https://github-profile-languages.vercel.app/api/button?language=TI%20Program)![Language button preview (dark high contrast)](https://github-profile-languages.vercel.app/api/button?language=Java&theme=dark_high_contrast)![Language button preview (dark dimmed)](https://github-profile-languages.vercel.app/api/button?language=C%2B%2B&theme=dark_dimmed)
 
-![Language bar preview (light default)](https://github-profile-languages.vercel.app/api/bar?width=830&theme=light)
+### Light Themes
 
-![Language bar preview (light high contrast)](https://github-profile-languages.vercel.app/api/bar?width=830&theme=light-high-contrast)
+Language Bar:
 
-![Language bar preview (light Protanopia & Deuteranopia)](https://github-profile-languages.vercel.app/api/bar?width=830&theme=light-colorblind)
+![Language bar preview (light)](https://github-profile-languages.vercel.app/api/bar?width=830&theme=light)
 
-![Language bar preview (light Tritanopia)](https://github-profile-languages.vercel.app/api/bar?width=830&theme=light-tritanopia)
+Language Button (default, high contrast):
 
-Dark themes (high contrast, Protanopia & Deuteranopia, Tritanopia, dimmed):
-
-![Language bar preview (dark high contrast)](https://github-profile-languages.vercel.app/api/bar?width=830&theme=dark-high-contrast)
-
-![Language bar preview (dark Protanopia & Deuteranopia)](https://github-profile-languages.vercel.app/api/bar?width=830&theme=dark-colorblind)
-
-![Language bar preview (dark Tritanopia)](https://github-profile-languages.vercel.app/api/bar?width=830&theme=dark-tritanopia)
-
-![Language bar preview (dark dimmed)](https://github-profile-languages.vercel.app/api/bar?width=830&theme=dark-dimmed)
-
-</details>
-
-### Language Button
-
-Light themes (default, high contrast, Protanopia & Deuteranopia, Tritanopia):
-
-![Language button preview (light default)](https://github-profile-languages.vercel.app/api/button?language=TI%20Program&theme=light)![Language button preview (light high contrast)](https://github-profile-languages.vercel.app/api/button?language=Java&theme=light_high_contrast)![Language button preview (light Protanopia & Deuteranopia)](https://github-profile-languages.vercel.app/api/button?language=Processing&theme=light_colorblind)![Language button preview (light Tritanopia)](https://github-profile-languages.vercel.app/api/button?language=Python&theme=light_tritanopia)
-
-Dark themes (default, high contrast, Protanopia & Deuteranopia, Tritanopia, dimmed):
-
-![Language button preview (dark default)](https://github-profile-languages.vercel.app/api/button?language=JavaScript)![Language button preview (dark high contrast)](https://github-profile-languages.vercel.app/api/button?language=Batchfile&theme=dark_high_contrast)![Language button preview (dark Protanopia & Deuteranopia)](https://github-profile-languages.vercel.app/api/button?language=VBScript&theme=dark_colorblind)![Language button preview (dark Tritanopia)](https://github-profile-languages.vercel.app/api/button?language=PowerShell&theme=dark_tritanopia)![Language button preview (dark dimmed)](https://github-profile-languages.vercel.app/api/button?language=AutoHotkey&theme=dark_dimmed)
+![Language button preview (light default)](https://github-profile-languages.vercel.app/api/button?language=Python&theme=light)![Language button preview (light high contrast)](https://github-profile-languages.vercel.app/api/button?language=JavaScript&theme=light_high_contrast)
 
 ## Deployment
 
