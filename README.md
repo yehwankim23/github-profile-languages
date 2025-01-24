@@ -6,6 +6,8 @@ Inspired by [GitHub Readme Stats](https://github.com/anuraghazra/github-readme-s
 
 ## Preview
 
+[My GitHub profile README](https://github.com/yehwankim23/yehwankim23)
+
 ### Dark Themes
 
 Language Bar:
@@ -14,7 +16,7 @@ Language Bar:
 
 Language Button (default, high contrast, dimmed):
 
-![Language button preview (dark default)](https://github-profile-languages.vercel.app/api/button?language=TI%20Program)![Language button preview (dark high contrast)](https://github-profile-languages.vercel.app/api/button?language=Java&theme=dark_high_contrast)![Language button preview (dark dimmed)](https://github-profile-languages.vercel.app/api/button?language=C%2B%2B&theme=dark_dimmed)
+![Language button preview (dark default)](https://github-profile-languages.vercel.app/api/button?language=javascript&theme=dark)![Language button preview (dark high contrast)](https://github-profile-languages.vercel.app/api/button?language=javascript&theme=dark_high_contrast)![Language button preview (dark dimmed)](https://github-profile-languages.vercel.app/api/button?language=javascript&theme=dark_dimmed)
 
 ### Light Themes
 
@@ -24,7 +26,7 @@ Language Bar:
 
 Language Button (default, high contrast):
 
-![Language button preview (light default)](https://github-profile-languages.vercel.app/api/button?language=Python&theme=light)![Language button preview (light high contrast)](https://github-profile-languages.vercel.app/api/button?language=JavaScript&theme=light_high_contrast)
+![Language button preview (light default)](https://github-profile-languages.vercel.app/api/button?language=javascript&theme=light)![Language button preview (light high contrast)](https://github-profile-languages.vercel.app/api/button?language=javascript&theme=light_high_contrast)
 
 ## Deployment
 
@@ -32,29 +34,29 @@ Language Button (default, high contrast):
 
 2. [Generate a GitHub personal access token](https://github.com/settings/tokens/new) with `public_repo` permission
 
-![Deployment (GitHub personal access token)](images/deployment-02.png)
+![Deployment 2](images/deployment-02.png)
 
 3. Go to [Vercel](https://vercel.com/login) and `Continue with GitHub`
 
-![Deployment (Continue with GitHub)](images/deployment-03.png)
+![Deployment 3](images/deployment-03.png)
 
 4. Click `Add New...` > `Project`
 
-![Deployment (Add New... > Project)](images/deployment-04.png)
+![Deployment 4](images/deployment-04.png)
 
 5. Find your repository and click `Import`
 
-![Deployment (Import)](images/deployment-05.png)
+![Deployment 5](images/deployment-05.png)
 
 6. Click `Environment Variables` and add `GPL_TOKEN` and `GPL_USERNAME`
 
-![Deployment (Environment Variables)](images/deployment-06.png)
+![Deployment 6](images/deployment-06.png)
 
 7. (Optional) Add languages that you want to ignore as comma-separated values (no spaces)
 
 > [Supported languages](/src/languages.js)
 
-![Deployment (ignore)](images/deployment-07.png)
+![Deployment 7](images/deployment-07.png)
 
 8. Click `Deploy`
 
@@ -62,7 +64,7 @@ Language Button (default, high contrast):
 
 10. Check your domains under `DOMAINS`
 
-![Deployment (ignore)](images/deployment-10.png)
+![Deployment 10](images/deployment-10.png)
 
 ## Usage
 
@@ -73,7 +75,7 @@ Copy and paste the following Markdown and change `DOMAIN`, `WIDTH`, and `THEME`
 > [Supported themes](/src/themes.js)
 
 ```md
-[![GitHub Profile Language Bar](DOMAIN/api/bar?width=WIDTH&theme=THEME)](https://github.com/yehwankim23/github-profile-languages)
+![GitHub Profile Languages - Bar](DOMAIN/api/bar?width=WIDTH&theme=THEME)
 ```
 
 Example:
@@ -83,12 +85,12 @@ Example:
 - `THEME` → `dark`
 
 ```md
-[![GitHub Profile Language Bar](https://github-profile-languages.vercel.app/api/bar?width=830&theme=dark)](https://github.com/yehwankim23/github-profile-languages)
+![GitHub Profile Languages - Bar](https://github-profile-languages.vercel.app/api/bar?width=830&theme=dark)
 ```
 
 Result:
 
-![GitHub Profile Language Bar](https://github-profile-languages.vercel.app/api/bar?width=830&theme=dark)
+![GitHub Profile Languages - Bar](https://github-profile-languages.vercel.app/api/bar?width=830&theme=dark)
 
 ### Language Button
 
@@ -99,7 +101,7 @@ Copy and paste the following Markdown and change `DOMAIN`, `LANGUAGE`, and `THEM
 > [Supported themes](/src/themes.js)
 
 ```md
-[![GitHub Profile Language Button](DOMAIN/api/button?language=LANGUAGE&theme=THEME)](https://github.com/yehwankim23/github-profile-languages)
+![GitHub Profile Languages - Button](DOMAIN/api/button?language=LANGUAGE&theme=THEME)
 ```
 
 Example:
@@ -109,12 +111,12 @@ Example:
 - `THEME` → `dark`
 
 ```md
-[![GitHub Profile Language Button](https://github-profile-languages.vercel.app/api/button?language=C%2b%2b&theme=dark)](https://github.com/yehwankim23/github-profile-languages)
+![GitHub Profile Languages - Button](https://github-profile-languages.vercel.app/api/button?language=C%2b%2b&theme=dark)
 ```
 
 Result:
 
-![GitHub Profile Language Button](https://github-profile-languages.vercel.app/api/button?language=C%2b%2b)
+![GitHub Profile Languages - Button](https://github-profile-languages.vercel.app/api/button?language=C%2b%2b&theme=dark)
 
 ### Language Stats
 
@@ -128,16 +130,21 @@ Example:
 
 Result:
 
-![Usage (stats)](images/usage-stats.png)
+![Usage (language stats)](images/usage-language-stats.png)
 
-Or use the `username` parameter to specify a user
+### README Generator
+
+Visit `DOMAIN/api/readme` to generate a README file
 
 Example:
 
 - `DOMAIN` → `https://github-profile-languages.vercel.app`
-- `USERNAME` → `yehwankim23`
 
-[https://github-profile-languages.vercel.app/api/stats?username=yehwankim23](https://github-profile-languages.vercel.app/api/stats?username=yehwankim23)
+[https://github-profile-languages.vercel.app/api/readme](https://github-profile-languages.vercel.app/api/readme)
+
+Result:
+
+![Usage (README generator)](images/usage-readme-generator.png)
 
 ### Percent-encoding
 

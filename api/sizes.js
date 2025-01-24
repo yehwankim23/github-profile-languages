@@ -55,13 +55,11 @@ export default async function handler(_request, response) {
       for (const edge of node.languages.edges) {
         const languageName = edge.node.name;
 
-        if (ignore.includes(languageName)) {
-          continue;
+        if (!ignore.includes(languageName)) {
+          const size = edge.size;
+          sizes.totalSize += size;
+          sizes[languageName] = (sizes[languageName] ?? 0) + size;
         }
-
-        const size = edge.size;
-        sizes.totalSize += size;
-        sizes[languageName] = (sizes[languageName] ?? 0) + size;
       }
     }
 

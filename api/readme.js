@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export default async function handler(request, response) {
+export default async function handler(_request, response) {
   try {
     response.setHeader("Content-Type", "text/html");
     response.setHeader("Cache-Control", "no-store");
@@ -11,7 +11,7 @@ export default async function handler(request, response) {
       throw new Error(`"GPL_TOKEN" is not defined`);
     }
 
-    const username = request.query.username ?? process.env.GPL_USERNAME;
+    const username = process.env.GPL_USERNAME;
 
     if (username === undefined) {
       throw new Error(`"GPL_USERNAME" is not defined`);
@@ -46,33 +46,75 @@ export default async function handler(request, response) {
       },
     });
 
-    let sizes = { Total: 0 };
+    const ignore = (process.env.GPL_IGNORE ?? "").split(",");
+    let sizes = {};
 
     for (const node of axiosResponse.data.data.user.repositories.nodes) {
       for (const edge of node.languages.edges) {
         const languageName = edge.node.name;
-        const size = edge.size;
-        sizes.Total += size;
-        sizes[languageName] = (sizes[languageName] ?? 0) + size;
+
+        if (!ignore.includes(languageName)) {
+          sizes[languageName] = (sizes[languageName] ?? 0) + edge.size;
+        }
       }
     }
 
     sizes = new Map(
-      Object.entries(sizes).sort(([_, a], [__, b]) => {
+      Object.entries(sizes).sort(([_request, a], [__, b]) => {
         return b - a;
       })
     );
 
-    let stats = "";
+    const github = `https://github.com/${username}?tab=repositories`;
+    const api = `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}/api`;
 
-    for (const [languageName, size] of sizes) {
-      stats += `
-        <tr>
-          <td>${languageName}</td>
-          <td>${new Intl.NumberFormat().format(size)}</td>
-        </tr>
-      `;
+    let readme = `
+### Languages
+
+<p>
+  <a href="${github}">
+    <picture>
+      <source
+        media="(prefers-color-scheme: light)"
+        srcset="${api}/bar?width=846&theme=light"
+      />
+      <img
+        src="${api}/bar?width=846&theme=dark"
+        alt="Repositories"
+      />
+    </picture>
+  </a>
+</p>
+
+<p>
+`;
+
+    for (const [languageName, _] of sizes) {
+      const escapedLanguageName = encodeURIComponent(languageName.toLowerCase());
+
+      readme += `  <a href="${github}&language=${escapedLanguageName.replaceAll("%20", "+")}">
+    <picture>
+      <source
+        media="(prefers-color-scheme: light)"
+        srcset="${api}/button?language=${escapedLanguageName}&theme=light"
+      />
+      <img
+        src="${api}/button?language=${escapedLanguageName}&theme=dark"
+        alt="${languageName}"
+      />
+    </picture>
+  </a>
+`;
     }
+
+    readme += "</p>";
+
+    readme = readme
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll(`"`, "&quot;")
+      .replaceAll("'", "&apos;");
 
     response.send(`
       <!DOCTYPE html>
@@ -80,36 +122,21 @@ export default async function handler(request, response) {
         <head>
           <meta charset="UTF-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <title>GitHub Profile Languages - Language Stats</title>
+          <title>GitHub Profile Languages - README Generator</title>
           <style>
             body {
               margin: 32px;
               background-color: #222;
+            }
+            pre {
               font-family: Consolas, Menlo, monospace;
               font-size: 16px;
               color: #ddd;
             }
-            table {
-              border-collapse: collapse;
-            }
-            th,
-            td {
-              border: 1px solid #ddd;
-              padding: 8px;
-            }
-            td:nth-child(even) {
-              text-align: right;
-            }
           </style>
         </head>
         <body>
-          <table>
-            <tr>
-              <th>Languages</th>
-              <th>Bytes</th>
-            </tr>
-            ${stats}
-          </table>
+          <pre>${readme}</pre>
         </body>
       </html>
     `);
