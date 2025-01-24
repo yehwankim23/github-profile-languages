@@ -10,13 +10,13 @@ export default async function handler(request, response) {
     response.setHeader("CDN-Cache-Control", "max-age=3600, stale-while-revalidate=604800");
     response.setHeader("Cache-Control", "max-age=3600, stale-while-revalidate=604800");
 
-    const languageName = request.query.language;
+    let languageName = request.query.language;
 
     if (languageName === undefined) {
       throw new Error(`"language" is not defined`);
     }
 
-    const language = languages[languageName];
+    const language = languages[languageName.toLowerCase()];
 
     if (language === undefined) {
       throw new Error(`"${languageName}" is not a supported language`);
@@ -29,6 +29,7 @@ export default async function handler(request, response) {
       throw new Error(`"${themeName}" is not a supported theme`);
     }
 
+    languageName = language.name;
     const languageWidth = language.width;
 
     const sizes = (

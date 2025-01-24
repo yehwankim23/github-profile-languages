@@ -67,7 +67,7 @@ export default async function handler(request, response) {
     let x = 0;
 
     for (const [languageName, size] of sizes) {
-      const language = languages[languageName];
+      const language = languages[languageName.toLowerCase()];
 
       if (language === undefined) {
         throw new Error(`"${languageName}" is not a supported language`);

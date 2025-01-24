@@ -31,7 +31,7 @@ for (const languageName in linguist) {
   text.innerHTML = languageName;
 
   const width = Math.round(text.getBBox().width);
-  languages[languageName] = { width: width, color: color };
+  languages[languageName.toLowerCase()] = { name: languageName, width: width, color: color };
 
   if (width > longestLanguage.width) {
     longestLanguage = { name: languageName, width: width, color: color };
