@@ -547,6 +547,7 @@ const languages = {
   textile: { name: "Textile", width: 38, color: "#ffe7ac" },
   thrift: { name: "Thrift", width: 33, color: "#d12127" },
   toit: { name: "Toit", width: 23, color: "#c2c9fb" },
+  "tree-sitter query": { name: "Tree-sitter Query", width: 97, color: "#8ea64c" },
   turing: { name: "Turing", width: 37, color: "#cf142b" },
   twig: { name: "Twig", width: 27, color: "#c1d026" },
   typescript: { name: "TypeScript", width: 63, color: "#3178c6" },
