@@ -1,6 +1,6 @@
 # GitHub Profile Languages
 
-API that generates GitHub-themed SVGs that show the percentage of a language in public repositories
+API that generates GitHub-themed SVGs that show the percentage of a language in a GitHub user's public repositories
 
 Inspired by [GitHub Readme Stats](https://github.com/anuraghazra/github-readme-stats) and [Shields.io](https://github.com/badges/shields)
 
