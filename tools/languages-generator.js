@@ -7,7 +7,7 @@ const linguist = yaml.load(
   (
     await axios({
       method: "get",
-      url: "https://raw.githubusercontent.com/github/linguist/master/lib/linguist/languages.yml",
+      url: "https://raw.githubusercontent.com/github-linguist/linguist/refs/heads/main/lib/linguist/languages.yml",
     })
   ).data
 );
