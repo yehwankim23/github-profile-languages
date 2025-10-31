@@ -70,6 +70,7 @@ export default async function handler(request, response) {
         <tr>
           <td>${languageName}</td>
           <td>${new Intl.NumberFormat().format(size)}</td>
+          <td>${((size * 100) / sizes.get("Total")).toFixed(1)}</td>
         </tr>
       `;
     }
@@ -97,7 +98,7 @@ export default async function handler(request, response) {
               border: 1px solid #ddd;
               padding: 8px;
             }
-            td:nth-child(even) {
+            td:nth-child(n + 2) {
               text-align: right;
             }
           </style>
@@ -107,6 +108,7 @@ export default async function handler(request, response) {
             <tr>
               <th>Languages</th>
               <th>Bytes</th>
+              <th>Percentages</th>
             </tr>
             ${stats}
           </table>
