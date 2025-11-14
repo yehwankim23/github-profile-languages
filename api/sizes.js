@@ -3,9 +3,9 @@ import axios from "axios";
 export default async function handler(_request, response) {
   try {
     response.setHeader("Content-Type", "application/json");
-    response.setHeader("Vercel-CDN-Cache-Control", "max-age=3600, stale-while-revalidate=604800");
-    response.setHeader("CDN-Cache-Control", "max-age=3600, stale-while-revalidate=604800");
-    response.setHeader("Cache-Control", "max-age=3600, stale-while-revalidate=604800");
+    response.setHeader("Vercel-CDN-Cache-Control", "s-maxage=86400, stale-while-revalidate=604800");
+    response.setHeader("CDN-Cache-Control", "s-maxage=86400, stale-while-revalidate=604800");
+    response.setHeader("Cache-Control", "s-maxage=86400, stale-while-revalidate=604800");
 
     const token = process.env.GPL_TOKEN;
 

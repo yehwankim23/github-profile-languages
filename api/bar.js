@@ -5,9 +5,9 @@ import { languages } from "../src/languages.js";
 export default async function handler(request, response) {
   try {
     response.setHeader("Content-Type", "image/svg+xml");
-    response.setHeader("Vercel-CDN-Cache-Control", "max-age=3600, stale-while-revalidate=604800");
-    response.setHeader("CDN-Cache-Control", "max-age=3600, stale-while-revalidate=604800");
-    response.setHeader("Cache-Control", "max-age=3600, stale-while-revalidate=604800");
+    response.setHeader("Vercel-CDN-Cache-Control", "s-maxage=86400, stale-while-revalidate=604800");
+    response.setHeader("CDN-Cache-Control", "s-maxage=86400, stale-while-revalidate=604800");
+    response.setHeader("Cache-Control", "s-maxage=86400, stale-while-revalidate=604800");
 
     const width = request.query.width;
 
