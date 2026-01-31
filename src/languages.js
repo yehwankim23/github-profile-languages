@@ -7,6 +7,7 @@ const languages = {
   "ags script": { name: "AGS Script", width: 65, color: "#b9d9ff" },
   aidl: { name: "AIDL", width: 30, color: "#34eb6b" },
   al: { name: "AL", width: 18, color: "#3aa2b5" },
+  algol: { name: "ALGOL", width: 44, color: "#d1e0db" },
   ampl: { name: "AMPL", width: 36, color: "#e6efbb" },
   antlr: { name: "ANTLR", width: 42, color: "#9dc3ff" },
   "api blueprint": { name: "API Blueprint", width: 78, color: "#2acca8" },
@@ -31,7 +32,6 @@ const languages = {
   "apollo guidance computer": { name: "Apollo Guidance Computer", width: 158, color: "#0b3d91" },
   applescript: { name: "AppleScript", width: 69, color: "#101f1f" },
   arc: { name: "Arc", width: 21, color: "#aa2afe" },
-  arkts: { name: "ArkTS", width: 36, color: "#0080ff" },
   asciidoc: { name: "AsciiDoc", width: 53, color: "#73a0c5" },
   aspectj: { name: "AspectJ", width: 48, color: "#a957b0" },
   assembly: { name: "Assembly", width: 58, color: "#6e4c13" },
@@ -42,6 +42,7 @@ const languages = {
   autoit: { name: "AutoIt", width: 37, color: "#1c3552" },
   "avro idl": { name: "Avro IDL", width: 51, color: "#0040ff" },
   awk: { name: "Awk", width: 26, color: "#c30e9b" },
+  "b (formal method)": { name: "B (Formal Method)", width: 106, color: "#8aa8c5" },
   b4x: { name: "B4X", width: 24, color: "#00e4ff" },
   basic: { name: "BASIC", width: 38, color: "#ff0000" },
   bqn: { name: "BQN", width: 27, color: "#2b7067" },
@@ -75,6 +76,7 @@ const languages = {
   clips: { name: "CLIPS", width: 35, color: "#00a300" },
   cmake: { name: "CMake", width: 39, color: "#da3434" },
   collada: { name: "COLLADA", width: 59, color: "#f1a42b" },
+  cql: { name: "CQL", width: 26, color: "#006091" },
   cson: { name: "CSON", width: 35, color: "#244776" },
   css: { name: "CSS", width: 25, color: "#663399" },
   csv: { name: "CSV", width: 26, color: "#237346" },
@@ -279,6 +281,7 @@ const languages = {
   json5: { name: "JSON5", width: 41, color: "#267cb9" },
   jsonld: { name: "JSONLD", width: 50, color: "#0c479c" },
   jsoniq: { name: "JSONiq", width: 44, color: "#40d47e" },
+  jac: { name: "Jac", width: 21, color: "#fc792d" },
   jai: { name: "Jai", width: 18, color: "#ab8b4b" },
   janet: { name: "Janet", width: 33, color: "#0886a5" },
   jasmin: { name: "Jasmin", width: 42, color: "#d03600" },
@@ -317,6 +320,7 @@ const languages = {
   lolcode: { name: "LOLCODE", width: 59, color: "#cc9900" },
   lsl: { name: "LSL", width: 23, color: "#3d9970" },
   labview: { name: "LabVIEW", width: 53, color: "#fede06" },
+  lambdapi: { name: "Lambdapi", width: 57, color: "#8027a3" },
   langium: { name: "Langium", width: 50, color: "#2c8c87" },
   lark: { name: "Lark", width: 26, color: "#2980b9" },
   lasso: { name: "Lasso", width: 35, color: "#999999" },
@@ -350,6 +354,11 @@ const languages = {
   markdown: { name: "Markdown", width: 59, color: "#083fa1" },
   marko: { name: "Marko", width: 36, color: "#42bff2" },
   mask: { name: "Mask", width: 30, color: "#f97732" },
+  "mathematical programming system": {
+    name: "Mathematical Programming System",
+    width: 204,
+    color: "#0530ad",
+  },
   max: { name: "Max", width: 24, color: "#c4a79c" },
   mercury: { name: "Mercury", width: 47, color: "#ff2b2b" },
   mermaid: { name: "Mermaid", width: 49, color: "#ff3670" },
@@ -469,6 +478,7 @@ const languages = {
   quickbasic: { name: "QuickBASIC", width: 71, color: "#008080" },
   r: { name: "R", width: 9, color: "#198ce7" },
   raml: { name: "RAML", width: 35, color: "#77d9fb" },
+  rascript: { name: "RAScript", width: 52, color: "#2c97fa" },
   rbs: { name: "RBS", width: 25, color: "#701516" },
   rdoc: { name: "RDoc", width: 32, color: "#701516" },
   rexx: { name: "REXX", width: 34, color: "#d90e09" },
@@ -547,6 +557,7 @@ const languages = {
   "subrip text": { name: "SubRip Text", width: 70, color: "#9e0101" },
   sugarss: { name: "SugarSS", width: 50, color: "#2fcc9f" },
   supercollider: { name: "SuperCollider", width: 80, color: "#46390b" },
+  surrealql: { name: "SurrealQL", width: 59, color: "#ff00a0" },
   "survex data": { name: "Survex data", width: 68, color: "#ffcc99" },
   svelte: { name: "Svelte", width: 36, color: "#ff3e00" },
   sway: { name: "Sway", width: 31, color: "#00f58c" },
@@ -556,6 +567,7 @@ const languages = {
   "ti program": { name: "TI Program", width: 65, color: "#a0aa87" },
   "tl-verilog": { name: "TL-Verilog", width: 60, color: "#c40023" },
   tla: { name: "TLA", width: 25, color: "#4b0079" },
+  tmdl: { name: "TMDL", width: 35, color: "#f0c913" },
   toml: { name: "TOML", width: 35, color: "#9c4221" },
   tsql: { name: "TSQL", width: 34, color: "#e38c00" },
   tsv: { name: "TSV", width: 25, color: "#237346" },
@@ -674,6 +686,6 @@ const languages = {
   xbase: { name: "xBase", width: 37, color: "#403a40" },
 };
 
-const longestLanguage = { name: "Cloud Firestore Security Rules", width: 176, color: "#ffa000" };
+const longestLanguage = { name: "Mathematical Programming System", width: 204, color: "#0530ad" };
 
 export { languages, longestLanguage };

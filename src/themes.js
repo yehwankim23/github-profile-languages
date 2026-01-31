@@ -11,7 +11,7 @@ const themes = {
     languageColor: "#ffffff",
     percentColor: "#b7bdc8",
   },
-  dark_dimmed: { backgroundColor: "#212830", languageColor: "#d1d7e0", percentColor: "#9198a1" },
+  dark_dimmed: { backgroundColor: "#212830", languageColor: "#f0f6fc", percentColor: "#9198a1" },
 };
 
 export { themes };
